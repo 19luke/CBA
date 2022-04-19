@@ -2,7 +2,8 @@
     "name": "game",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "radio-broadcast": "*"
     },
     "files": [
         "main.blocks",
