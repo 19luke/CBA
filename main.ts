@@ -374,17 +374,18 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles7, function (s
     lunk.setPosition(190, 820)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (sprite, location) {
-    lunk.setPosition(593, 1140)
+    lunk.setPosition(610, 880)
+    lunk.sayText("wow that was like a 1 foot drop :(", 2000, false)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
-    lunk.sayText(";)")
+    lunk.sayText(";)", 100, false)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorLight1, function (sprite, location) {
     lunk.setPosition(593, 1140)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
     music.baDing.play()
-    lunk.sayText("A sworde?, cool", 2000, false)
+    lunk.sayText("A sword?, cool", 2000, false)
     tiles.setWallAt(tiles.getTileLocation(11, 41), true)
     tiles.setWallAt(tiles.getTileLocation(12, 41), true)
 })
@@ -394,6 +395,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (spr
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
     lunk.sayText("blah blah blah blah blah blah, (shit you cant understand) ", 2000, false)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile31`, function (sprite, location) {
+    mySprite2.sayText("no", 200, false)
+})
+let mySprite2: Sprite = null
 let lunk: Sprite = null
 lunk = sprites.create(img`
     . . . . . . f f f f . . . . . . 
@@ -438,6 +443,25 @@ let mySprite = sprites.create(img`
     `, SpriteKind.Enemy)
 mySprite.setPosition(62, 1180)
 mySprite.setVelocity(200, 0)
+mySprite2 = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)
+mySprite2.setPosition(610, 660)
 animation.runImageAnimation(
 mySprite,
 [img`
