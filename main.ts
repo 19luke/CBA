@@ -635,7 +635,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, 
     lunk.sayText("GO THAT WAY", 2000, false)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile31`, function (sprite, location) {
-    mySprite2.sayText("survive", 200, false)
+    mySprite2.sayText("no", 200, false)
     info.startCountdown(60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -890,7 +890,7 @@ game.onUpdateInterval(300, function () {
     90,
     true
     )
-    mySprite3.setPosition(720, randint(680, 880))
+    mySprite3.setPosition(720, randint(680, 850))
     mySprite3.setVelocity(-60, 0)
     mySprite3.setFlag(SpriteFlag.DestroyOnWall, true)
 })
